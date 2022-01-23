@@ -30,7 +30,7 @@ public class EventRegisterationServiceImpl implements EventRegisterationService 
 
 	@Override
 	public EventRegisteration saveRegisteration(EventRegisteration reg) {
-		log.info("Save user {} to database", reg.getEventCode());
+		log.info("Save user {} to database", reg.getUserFirstName());
 		return eventRegRepo.save(reg);
 	}
 
@@ -55,7 +55,7 @@ public class EventRegisterationServiceImpl implements EventRegisterationService 
 	public boolean isDuplicate(String userPhoneNumber) {
 		if (Strings.isNotEmpty(userPhoneNumber)){
 			List<EventRegisteration> findByUserPhoneNumber = eventRegRepo.findByUserPhoneNumber(userPhoneNumber);
-			return !(findByUserPhoneNumber==null&& findByUserPhoneNumber.size()>0); 
+			return findByUserPhoneNumber!=null && findByUserPhoneNumber.size()>0; 
 		
 		} else {
 			return false; 

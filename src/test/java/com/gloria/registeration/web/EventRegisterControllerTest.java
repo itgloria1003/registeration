@@ -40,4 +40,12 @@ class EventRegisterControllerTest {
 				.andExpect(MockMvcResultMatchers.status().isBadRequest());
 			}
 
+
+	@Test
+	public void whenPostRequestToRegister_thenDuplciateResponse() throws Exception {
+		String user = "{\n\t\"eventCode\": \"abc-event\", \n\t\"userFirstName\": \"Gloria\",\n        \"userPhoneNumber\": \"12345678\"\n}";
+		mockMvc.perform(
+				MockMvcRequestBuilders.post("/api/registeration").content(user).contentType(MediaType.APPLICATION_JSON))
+				.andExpect(MockMvcResultMatchers.status().isBadRequest());
+			}
 }
