@@ -1,11 +1,8 @@
 package com.gloria.registeration.validation;
 
-import java.util.regex.Pattern;
-
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import com.gloria.registeration.dto.EventRegisterationRequest;
 import com.gloria.registeration.service.EventRegisterationService;
 
 import org.springframework.context.MessageSource;
