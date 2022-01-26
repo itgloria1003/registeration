@@ -7,7 +7,6 @@ import javax.validation.Valid;
 
 import org.apache.logging.log4j.util.Strings;
 import org.modelmapper.ModelMapper;
-import org.springframework.data.util.Optionals;
 import org.springframework.stereotype.Service;
 
 import com.gloria.registeration.domain.EventRegisteration;
