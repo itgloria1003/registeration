@@ -6,3 +6,4 @@ Some update on main branch
 Get registration
 http://localhost:8080/api/registrations
 
+some thing added in branch 1 
