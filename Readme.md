@@ -7,3 +7,5 @@ Get registration
 http://localhost:8080/api/registrations
 
 some thing added in branch 1 
+
+some thing added in branch 2 
